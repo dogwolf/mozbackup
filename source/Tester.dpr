@@ -73,6 +73,8 @@ uses
   SpiceBirdApp in 'apps\SpiceBirdApp.pas',
   SunbirdApp in 'apps\SunbirdApp.pas',
   ThunderbirdApp in 'apps\ThunderbirdApp.pas',
+  PostboxApp in 'apps\PostboxApp.pas',
+  SongbirdApp in 'apps\SongbirdApp.pas',  
   TesterHelper in 'TesterHelper.pas';
 
 begin
