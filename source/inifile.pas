@@ -137,7 +137,12 @@ begin
         if (Length (S) > 0) and (DirectoryExists (S)) then Form1.SongbirdDir:= S;
         S:= '';
 
-        // Monitor, na kterÈm bude aplikace zobrazena
+        // Adresar pro zalohy (Postboxu)
+        S:= Trim (IniFile.ReadString('General', 'postboxdir', ''));
+        if (Length (S) > 0) and (DirectoryExists (S)) then Form1.PostboxDir:= S;
+        S:= '';
+        
+        // Monitor, na kter√©m bude aplikace zobrazena
         S:= Trim (IniFile.ReadString('General', 'monitor', ''));
         Form1.Monitor:= 1;
         if (Length (S) > 0) then
@@ -149,7 +154,7 @@ begin
             end;
           end;
         
-        // Info, zda bude uûivatel p¯i z·lohov·nÌ dotazov·n na heslo
+        // Info, zda bude u≈æivatel p√∏i z√°lohov√°n√≠ dotazov√°n na heslo
         S:= Trim (IniFile.ReadString('General', 'askForPassword', ''));
         if (S = 'false') then
           begin
